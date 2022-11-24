@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,700&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
+}
+
+:root {
+  --main-color: #5FCDD9;
+  --sec-color: #027373;
+  --ter-color: #04BFAD;
+  --quar-color: #04BF9D;
+  --dark-color: #172026;
+}
+
+header {
+    padding: 1.5rem ;
+}
+
+#mainMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1rem 0
+    
+}
+
+#linksMenu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#linksMenu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    font-size: 20px;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+}
+
+#linksMenu a:active {
+    color: aqua;
+}
+
+#linksMenu a:hover {
+    color: aqua;
+    border-bottom: 2px solid var(--dark-color);
+}
+
+header img {
+    max-height: 75px;
+    cursor: pointer;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    margin: 32px;
+  }
+
+  .sayHello {
+    color: var(--dark-color);
+    cursor: pointer;
+  }
+  
+  .sayHello::after,
+  .sayHello::before {
+    border: 2px solid var(--dark-color);
+    content: "";
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  
+  .sayHello:hover::after {
+    transform: translate(-5px, -5px);
+  }
+  
+  .sayHello:hover::before {
+    transform: translate(5px, 5px);
+  }
